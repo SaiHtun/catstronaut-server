@@ -6,7 +6,7 @@ const resolvers = require("./resolvers");
 const server = new ApolloServer({
   typeDefs,
   cors: {
-    origin: ["http://localhost:3000", "https://studio.apollographql.com"],
+    origin: ["https://catstronaut-client101.herokuapp.com/"],
   },
   dataSources: () => {
     return {
