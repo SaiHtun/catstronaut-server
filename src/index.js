@@ -16,6 +16,6 @@ const server = new ApolloServer({
   resolvers,
 });
 
-server.listen().then(({ url, ...rest }) => {
+server.listen({ port: process.env.PORT || 4000 }).then(({ url, ...rest }) => {
   console.log(`server ready at ${url}`);
 });
