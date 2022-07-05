@@ -6,11 +6,10 @@ const resolvers = require("./resolvers");
 const server = new ApolloServer({
   typeDefs,
   cors: {
-    origin: [
-      "https://catstronaut-client101.herokuapp.com/",
-      "https://studio.apollographql.com",
-    ],
+    origin: "*",
   },
+  csrfPrevention: true,
+  cache: "bounded",
   dataSources: () => {
     return {
       TrackAPI: new TrackAPI(),
